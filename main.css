@@ -1,5 +1,10 @@
 body {
-    background: #fff;
+    background-image: url(bathroom.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
     padding: 0px;
     margin: 0px;
     font-family: 'Lato', sans-serif;
@@ -8,6 +13,29 @@ body {
 input,
 button {
     font-family: 'Lato', sans-serif;
+}
+
+.box {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.box input {
+    padding: 10px 0;
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid #999;
 }
 
 .main-div,
@@ -36,9 +64,9 @@ button {
 
 .main-div button,
 .loggedin-div button {
-    background: #5dBff5;
+    background: #a7b2fc;
     color: #fff;
-    border: 1px solid #5d8ffc;
+    border: 1px solid #6d7bd4;
     border-radius: 5px;
     padding: 10px;
     display: block;
@@ -52,7 +80,7 @@ button {
 .main-div button:hover,
 .loggedin-div button:hover {
     background: #fff;
-    color: #5d8ffc;
-    border: 1px solid #5d8ffc;
+    color: #a7b2fc;
+    border: 1px solid #6d7bd4;
     cursor: pointer;
 }

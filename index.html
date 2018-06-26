@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     <!-- linking fonts from Google -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
@@ -19,14 +18,18 @@
     <div class="container">
 
         <!-- MAIN SIGN IN DIV -->
-        <div id="main_div" class="main-div">
+        <div id="main_div" class="main-div box">
+            <h1>In A Pinch</h1>
+            <hr>
+            <!-- <input id="txtUsername" type="username" placeholder="Username"> -->
             <input id="txtEmail" type="email" placeholder="Email">
             <input id="txtPassword" type="password" placeholder="Password">
+
+
+            <button id="btnLogin" class="btn btn-action">Login</button>
             <!-- ////////////////// -->
             <button id="btnGoogle" class="btn btn-action">Google Login</button>
             <!-- ////////////////// -->
-
-            <button id="btnLogin" class="btn btn-action">Log In</button>
             <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
         </div>
 
@@ -64,6 +67,9 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
     <!-- BOOTSTRAP -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
