@@ -16,9 +16,11 @@ const btnLogin = document.getElementById('btnLogin');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 
+/////////////////////////////////////////////////////////////////////////////
 // Add Google login event
 btnGoogle.addEventListener("click", e => {
-    function googleLogin(e) {
+    
+    function googleLogin() {
         function newGoogleLogin(user) {
             if (user) {
                 // User is signed in
@@ -39,7 +41,7 @@ btnGoogle.addEventListener("click", e => {
         document.getElementById("clientName").innerHTML = user.displayName;
     }
 });
-
+////////////////////////////////////////////////////////////////////////////////
 
 // Add login event
 btnLogin.addEventListener('click', e => {
@@ -63,6 +65,7 @@ btnLogin.addEventListener('click', e => {
         // console.log(errorMessage);
     });
 
+    ////////////////////////////////////////////////////////////////////////////////
 
 // Add signup event
 btnSignUp.addEventListener("click", e => {
@@ -80,6 +83,8 @@ btnLogout.addEventListener('click', e => {
     firebase.auth().signOut();
 });
 
+
+////////////////////////////////////////////////////////////////////////////////
 // Add a realtime listener
 
 firebase.auth().onAuthStateChanged(function (user) {
