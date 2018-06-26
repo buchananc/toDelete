@@ -1,4 +1,4 @@
-require('dotenv').config();
+var dotenv = require('dotenv').config();
 
 // Initialize Firebase
 var config = {
@@ -10,7 +10,10 @@ var config = {
     messagingSenderId: process.env.MESSAGINGSENDERID
 };
 firebase.initializeApp(config);
-console.log(config);
+console.log("Firebase is connected: " + config);
+
+// Variable to reference the database
+var database = firebase.database();
 
 // Get elements
 const txtEmail = document.getElementById('email_field');
