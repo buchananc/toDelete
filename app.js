@@ -29,10 +29,12 @@ btnLogin.addEventListener('click', e => {
         // Handle error
         var errorCode = error.code;
         var errorMessage = error.message;
-                
+         
+        alert(errorMessage);
+        console.log(errorMessage);
     });
-    alert(errorMessage);
-    console.log(errorMessage);
+    // alert(errorMessage);
+    // console.log(errorMessage);
 });
 
 // Add signup event
