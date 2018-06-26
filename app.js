@@ -16,6 +16,31 @@ const btnLogin = document.getElementById('btnLogin');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 
+// Add Google login event
+btnGoogle.addEventListener("click", e => {
+function googleLogin() {
+    function newGoogleLogin(user) {
+        if (user) {
+            // User is signed in
+            app(user);
+        } else {
+            var provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithRedirect(provider);
+        }
+    }
+    firebase.auth().onAuthStateChanged(newGoogleLogin);
+}
+
+function app(user) {
+    //user.displayName
+    //user.email
+    //user.photoURL
+    //user.uid
+    document.getElementById("clientName").innerHTML = user.displayName;
+}
+}
+
+
 // Add login event
 btnLogin.addEventListener('click', e => {
     // Get email and pass
