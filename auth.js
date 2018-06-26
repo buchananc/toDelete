@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 // Initialize Firebase
-const config = {
+var config = {
     apiKey: process.env.APIKEY,
     authDomain: process.env.AUTHDOMAIN,
     databaseURL: process.env.DATABASEURL,
@@ -10,6 +10,7 @@ const config = {
     messagingSenderId: process.env.MESSAGINGSENDERID
 };
 firebase.initializeApp(config);
+console.log(config);
 
 // Get elements
 const txtEmail = document.getElementById('email_field');
@@ -63,6 +64,9 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
 function logout() {
     firebase.auth().signOut();
+
+    // Takes user back to main page
+    window.location.assign('./index.html');
 }
 
 //////////////////////////working code below////////////////////////
