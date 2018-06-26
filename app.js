@@ -26,8 +26,13 @@ btnLogin.addEventListener('click', e => {
 
     // Sign in
     const promise = auth.signInWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
-
+    promise.catch(function (error) {
+        // Handle error
+        var errorCode = error.code;
+        var errorMessage = error.message;
+                
+    });
+    console.log(error.message);
 });
 
 // Add signup event
