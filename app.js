@@ -30,7 +30,7 @@ btnLogin.addEventListener('click', e => {
         var errorCode = error.code;
         var errorMessage = error.message;
         
-        $("#myModal").modal();
+        $("#myBtn").modal();
         // alert("You look a little flushed! The email you entered is not correct. Try again!");
         console.log(errorMessage);
     });
