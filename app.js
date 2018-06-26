@@ -18,7 +18,7 @@ const btnLogout = document.getElementById('btnLogout');
 
 // Add Google login event
 btnGoogle.addEventListener("click", e => {
-    function googleLogin() {
+    function googleLogin(e) {
         function newGoogleLogin(user) {
             if (user) {
                 // User is signed in
