@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- linking Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <!-- linking fonts from Google -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <!-- linking local css -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>In a Pinch Sign in</title>
+</head>
+
+<body>
+    <div id="login_div" class="main-div">
+        <h3>In a Pinch Login</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+
+        <!-- <button onclick='login()'>Login to Account</button>
+        <button onclick='signIn()'>Login with Google</button>
+        <button onclick='logOut()'>Logout</button> -->
+
+
+        <button id="btnLogin">Login to Account</button>
+        <!-- <button>Login with Google</button> -->
+        <button id="btnSignUp">Sign Up</button>
+        <button id="btnLogout" class="hide">Logout</button>
+
+        <p>New here?
+            <a href="#" id="newAccount">Create an account!</a>
+        </p>
+    </div>
+
+    <!-- <div id='signUp_div' class='signUp-div'>
+        <h3>In a Pinch Sign Up</h3>
+        <input type='email' placeholder="Email..." id="email_newuser" />
+        <input type="password" placeholder="Password..." id="password_newuser" />
+    
+        <button onclick='handleSignUp()'>Sign Up</button>
+        <button onclick='signIn()'>Login with Google</button>
+    </div> -->
+
+    <!-- <div id='user_div' class='loggedin-div'>
+        <h3>Welcome User</h3>
+        <p id="user_para">Welcome to In a Pinch. You are currently logged in.</p>
+        <button onclick="logout()">Logout</button>
+    </div> -->
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script scr="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- linking local javascript -->
+    <script src="auth.js"></script>
+</body>
+
+</html>
