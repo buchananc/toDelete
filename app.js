@@ -51,14 +51,34 @@ btnLogout.addEventListener('click', e => {
 });
 
 // Add a realtime listener
-firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (firebaseUser) {
-        console.log(firebaseUser);
-        // Show logout btn
-        btnLogout.classList.remove('hide');
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        // User is signed in.
+        document.getElementById("user_div").style.display = "block";
+        document.getElementById("main_div").style.display = "none";
+
+        var user = firebase.auth().currentUser;
+
+        if(user != null) {
+            var email_id = user.email;
+
+            document.getElementById("user_para").innerHTML = "Welcome User: " + email_id;
+        }
     } else {
-        console.log('not logged in');
-        // Hide logout btn
-        btnLogout.classList.add('hide');
+        // No user is signed in.
+        document.getElementById("user_div").style.display = "none";
+        document.getElementById("main_div").style.display = "block";
     }
 });
+// firebase.auth().onAuthStateChanged(firebaseUser => {
+//     if (firebaseUser) {
+//         console.log(firebaseUser);
+//         // Show logout btn
+//         btnLogout.classList.remove('hide');
+//     } else {
+//         console.log('not logged in');
+//         // Hide logout btn
+//         btnLogout.classList.add('hide');
+//     }
+// });
