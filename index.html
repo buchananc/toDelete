@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -17,13 +17,19 @@
 
 <body>
     <div class="container">
-        <div id="login_div" class="main-div">
+        <div id="main_div" class="main-div">
             <input id="txtEmail" type="email" placeholder="Email">
             <input id="txtPassword" type="password" placeholder="Password">
 
             <button id="btnLogin" class="btn btn-action">Log In</button>
             <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
-            <button id="btnLogout" class="btn btn-action hide">Log Out</button>
+            <!-- <button id="btnLogout" class="btn btn-action hide">Log Out</button> -->
+        </div>
+
+        <div id="user_div" class="loggedin-div">
+            <h3>Welcome User</h3>
+            <p id="user_para">Welcome to In a Pinch. You are currently logged in.</p>
+            <button id="btnLogout" class="btn btn-action hide">Logout</button>
         </div>
     </div>
 

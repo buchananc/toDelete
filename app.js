@@ -1,5 +1,4 @@
-
-    // Initialize Firebase
+// Initialize Firebase
     var config = {
         apiKey: "AIzaSyA2_tnNsCgwOh6gNQIhuBPu5dzrtdctTEU",
         authDomain: "in-a-pinch-project-2.firebaseapp.com",
@@ -8,7 +7,7 @@
         storageBucket: "in-a-pinch-project-2.appspot.com",
         messagingSenderId: "674290992138"
     };
-firebase.initializeApp(config); 
+    firebase.initializeApp(config); 
 
 // Get elements
 const txtEmail = document.getElementById('txtEmail');
