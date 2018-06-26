@@ -17,14 +17,14 @@
 
 <body>
     <div class="container">
-        
+
         <!-- MAIN SIGN IN DIV -->
         <div id="main_div" class="main-div">
             <input id="txtEmail" type="email" placeholder="Email">
             <input id="txtPassword" type="password" placeholder="Password">
-<!-- ////////////////// -->
+            <!-- ////////////////// -->
             <button id="btnGoogle" class="btn btn-action">Google Login</button>
-<!-- ////////////////// -->
+            <!-- ////////////////// -->
 
             <button id="btnLogin" class="btn btn-action">Log In</button>
             <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
@@ -33,7 +33,9 @@
         <!-- WELCOME SCREEN -->
         <div id="user_div" class="loggedin-div">
             <!-- <h3>Welcome User</h3> -->
-            <p id="user_para">Welcome to In a Pinch. You are currently logged in.</p>
+            <p id="user_para">
+                <span id="clientName">, welcome to In a Pinch. You are currently logged in.</span>
+            </p>
             <button id="btnLogout" class="btn btn-action show">Logout</button>
         </div>
 
