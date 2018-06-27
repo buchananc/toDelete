@@ -66,7 +66,7 @@ btnLogin.addEventListener('click', e => {
 
 btnRegister.addEventListener("click", e => {
     // Get email and pass
-    const username = txtUsername.value; //added
+    // const username = txtUsername.value; //added
     const email = txtEmail.value;
     const pass = txtPassword.value;
     const auth = firebase.auth();
