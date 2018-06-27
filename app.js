@@ -52,7 +52,7 @@ btnLogin.addEventListener('click', e => {
         var errorCode = error.code;
         var errorMessage = error.message;
 
-        // $("#exampleModal").modal();
+        $("#exampleModal").modal();
         // alert("You look a little flushed! The email you entered is not correct. Try again!");
         console.log(errorMessage);
     });
@@ -100,6 +100,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         }
     } else {
         // No user is signed in.
+        console.log("not logged in");
         document.getElementById("user_div").style.display = "none";
         document.getElementById("main_div").style.display = "block";
     }
