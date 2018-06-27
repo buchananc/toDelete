@@ -16,6 +16,9 @@
 
 <body>
     <div class="container">
+        <pre id="object">
+            <!-- object will display in this pre -->
+        </pre>
 
         <!-- MAIN SIGN IN DIV -->
         <div id="main_div" class="main-div">
@@ -25,7 +28,7 @@
             <input id="userPassword" type="password" placeholder="Password">
 
             <button id="btnLogin" class="btn btn-action">Login</button>
-            <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+            <button id="btnRegister" class="btn btn-secondary">Register</button>
         </div>
         <!-- END OF MAIN SIGN IN DIV -->
 
@@ -84,6 +87,10 @@
 
     <!-- FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <!-- Firebase Simple Login -->
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.4/firebase-simple-login.js"></script>
+    
+    <script type='text/javascript' src='config.js'></script>
     <script src="app.js"></script>
 </body>
 

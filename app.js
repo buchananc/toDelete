@@ -1,12 +1,19 @@
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyA2_tnNsCgwOh6gNQIhuBPu5dzrtdctTEU",
-    authDomain: "in-a-pinch-project-2.firebaseapp.com",
-    databaseURL: "https://in-a-pinch-project-2.firebaseio.com",
-    projectId: "in-a-pinch-project-2",
-    storageBucket: "in-a-pinch-project-2.appspot.com",
-    messagingSenderId: "674290992138"
-};
+var apiKey = config.apiKey;
+var authDomain = config.authDomain;
+var databaseURL = config.databaseURL;
+var projectId = config.projectId;
+var storageBucket = config.storageBucket;
+var messagingSenderId = config.messagingSenderId;
+
+// var config = {
+//     apiKey: "AIzaSyA2_tnNsCgwOh6gNQIhuBPu5dzrtdctTEU",
+//     authDomain: "in-a-pinch-project-2.firebaseapp.com",
+//     databaseURL: "https://in-a-pinch-project-2.firebaseio.com",
+//     projectId: "in-a-pinch-project-2",
+//     storageBucket: "in-a-pinch-project-2.appspot.com",
+//     messagingSenderId: "674290992138"
+// };
 firebase.initializeApp(config);
 
 // Get elements
@@ -19,7 +26,19 @@ const btnLogin = document.getElementById('btnLogin');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 
-// Add login event
+//added section Get elements
+const preObject = document.getElementById('object');
+
+//added section Create references
+const dbRefObject = firebase.database().ref().child('object');
+
+//added section sync object changes
+dbRefObject.on('value', snap => console.log(snap.val()));
+
+/////////////////////////////////////////////////////// 
+//Add login event
+///////////////////////////////////////////////////////
+
 btnLogin.addEventListener('click', e => {
     // Get email and pass
     const email = userEmail.value;
@@ -41,10 +60,11 @@ btnLogin.addEventListener('click', e => {
     // console.log(errorMessage);
 });
 
-////////////////////////////////////////////////////////////////////////////////
-
+///////////////////////////////////////////////////////
 // Add signup event
-btnSignUp.addEventListener("click", e => {
+///////////////////////////////////////////////////////
+
+btnRegister.addEventListener("click", e => {
     // Get email and pass
     const username = txtUsername.value; //added
     const email = txtEmail.value;
@@ -53,6 +73,10 @@ btnSignUp.addEventListener("click", e => {
 
     // Sign in
     const promise = auth.createUserWithEmailAndPassword(email, pass);
+    /////new stuff//////
+
+
+    /////end of new stuff/////
     promise.catch(e => console.log(e.message));
 });
 
@@ -61,8 +85,9 @@ btnLogout.addEventListener('click', e => {
 });
 
 
-////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
 // Add a realtime listener
+///////////////////////////////////////////////////////
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
