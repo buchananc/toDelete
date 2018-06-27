@@ -10,66 +10,43 @@ var config = {
 firebase.initializeApp(config);
 
 // Get elements
+const userEmail = document.getElementById('userEmail');
+const userPassword = document.getElementById('userPassword');
+const txtUsername = document.getElementById('txtUsername');
 const txtEmail = document.getElementById('txtEmail');
 const txtPassword = document.getElementById('txtPassword');
 const btnLogin = document.getElementById('btnLogin');
 const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 
-/////////////////////////////////////////////////////////////////////////////
-// Add Google login event
-btnGoogle.addEventListener("click", e => {
-    
-    function googleLogin() {
-        function newGoogleLogin(user) {
-            if (user) {
-                // User is signed in
-                app(user);
-            } else {
-                var provider = new firebase.auth.GoogleAuthProvider();
-                firebase.auth().signInWithRedirect(provider);
-            }
-        }
-        firebase.auth().onAuthStateChanged(newGoogleLogin);
-    }
-
-    function app(user) {
-        //user.displayName
-        //user.email
-        //user.photoURL
-        //user.uid
-        document.getElementById("clientName").innerHTML = user.displayName;
-    }
-});
-////////////////////////////////////////////////////////////////////////////////
-
 // Add login event
 btnLogin.addEventListener('click', e => {
-        // Get email and pass
-        const email = txtEmail.value;
-        const pass = txtPassword.value;
-        const auth = firebase.auth();
+    // Get email and pass
+    const email = userEmail.value;
+    const pass = userPassword.value;
+    const auth = firebase.auth();
 
-        // Sign in
-        const promise = auth.signInWithEmailAndPassword(email, pass);
-        promise.catch(function (error) {
-            // Handle error
-            var errorCode = error.code;
-            var errorMessage = error.message;
+    // Sign in
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    promise.catch(function (error) {
+        // Handle error
+        var errorCode = error.code;
+        var errorMessage = error.message;
 
-            $("#exampleModal").modal();
-            // alert("You look a little flushed! The email you entered is not correct. Try again!");
-            console.log(errorMessage);
-        });
-        // alert(errorMessage);
-        // console.log(errorMessage);
+        $("#exampleModal").modal();
+        // alert("You look a little flushed! The email you entered is not correct. Try again!");
+        console.log(errorMessage);
     });
+    // alert(errorMessage);
+    // console.log(errorMessage);
+});
 
-    ////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 // Add signup event
 btnSignUp.addEventListener("click", e => {
     // Get email and pass
+    const username = txtUsername.value; //added
     const email = txtEmail.value;
     const pass = txtPassword.value;
     const auth = firebase.auth();
@@ -106,6 +83,8 @@ firebase.auth().onAuthStateChanged(function (user) {
         document.getElementById("main_div").style.display = "block";
     }
 });
+
+
 // firebase.auth().onAuthStateChanged(firebaseUser => {
 //     if (firebaseUser) {
 //         console.log(firebaseUser);

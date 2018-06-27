@@ -1,5 +1,5 @@
 body {
-    background-image: url(/bathroom.jpg);
+    background-image: url(bathroom.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -15,30 +15,10 @@ button {
     font-family: 'Lato', sans-serif;
 }
 
-.box {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    background: #fff;
-    padding: 40px;
-    box-sizing: border-box;
-    border: 1px solid rgba(0,0,0,.1);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
-}
 
-.box input {
-    padding: 10px 0;
-    margin-bottom: 30px;
-    width: 100%;
-    box-sizing: border-box;
-    box-shadow: none;
-    outline: none;
-    border-bottom: 2px solid #999;
-}
 
 .main-div,
+.signup-div,
 .loggedin-div {
     width: 35%;
     margin: 0px auto;
@@ -47,7 +27,9 @@ button {
     display: none;
 }
 
-.main-div input {
+.main-div,
+.signup-div,
+input {
     display: block;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -58,12 +40,15 @@ button {
     margin-bottom: 20px;
 }
 
-.main-div input:focus {
+.main-div,
+.signup-div,
+input:focus {
     border: 1px solid #777;
 }
 
 .main-div button,
-.loggedin-div button {
+.loggedin-div button, 
+.signup-div button {
     background: #a7b2fc;
     color: #fff;
     border: 1px solid #6d7bd4;
@@ -78,7 +63,8 @@ button {
 }
 
 .main-div button:hover,
-.loggedin-div button:hover {
+.loggedin-div button:hover,
+.signup-div button:hover {
     background: #fff;
     color: #a7b2fc;
     border: 1px solid #6d7bd4;

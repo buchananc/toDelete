@@ -18,26 +18,34 @@
     <div class="container">
 
         <!-- MAIN SIGN IN DIV -->
-        <div id="main_div" class="main-div box">
+        <div id="main_div" class="main-div">
             <h1>In A Pinch</h1>
             <hr>
-            <!-- <input id="txtUsername" type="username" placeholder="Username"> -->
+            <input id="userEmail" type="email" placeholder="Email">
+            <input id="userPassword" type="password" placeholder="Password">
+
+            <button id="btnLogin" class="btn btn-action">Login</button>
+            <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+        </div>
+        <!-- END OF MAIN SIGN IN DIV -->
+
+        <!-- SIGN UP DIV -->
+        <div id="signup_div" class="signup-div">
+            <h1>In A Pinch</h1>
+            <hr>
+            <input id="txtUsername" type="text" placeholder="Username">
             <input id="txtEmail" type="email" placeholder="Email">
             <input id="txtPassword" type="password" placeholder="Password">
 
-
-            <button id="btnLogin" class="btn btn-action">Login</button>
-            <!-- ////////////////// -->
-            <button id="btnGoogle" class="btn btn-action">Google Login</button>
-            <!-- ////////////////// -->
             <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
         </div>
+        <!-- END OF SIGN UP DIV -->
 
         <!-- WELCOME SCREEN -->
         <div id="user_div" class="loggedin-div">
             <!-- <h3>Welcome User</h3> -->
             <p id="user_para">
-                <span id="clientName">, welcome to In a Pinch. You are currently logged in.</span>
+                <span id="showUsername">, welcome to In a Pinch. You are currently logged in.</span>
             </p>
             <button id="btnLogout" class="btn btn-action show">Logout</button>
         </div>
