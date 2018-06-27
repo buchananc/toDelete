@@ -23,7 +23,7 @@ const txtUsername = document.getElementById('txtUsername');
 const txtEmail = document.getElementById('txtEmail');
 const txtPassword = document.getElementById('txtPassword');
 const btnLogin = document.getElementById('btnLogin');
-const btnSignUp = document.getElementById('btnSignUp');
+const btnRegister = document.getElementById('btnRegister');
 const btnLogout = document.getElementById('btnLogout');
 
 //added section Get elements
