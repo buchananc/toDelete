@@ -57,7 +57,7 @@ btnLogin.addEventListener('click', e => {
         console.log(errorMessage);
     });
     // alert(errorMessage);
-    // console.log(errorMessage);
+    console.log(errorMessage);
 });
 
 ///////////////////////////////////////////////////////
@@ -73,10 +73,6 @@ btnRegister.addEventListener("click", e => {
 
     // Sign in
     const promise = auth.createUserWithEmailAndPassword(email, pass);
-    /////new stuff//////
-
-
-    /////end of new stuff/////
     promise.catch(e => console.log(e.message));
 });
 
