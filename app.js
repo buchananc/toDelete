@@ -1,19 +1,19 @@
 // Initialize Firebase
-var apiKey = config.apiKey;
-var authDomain = config.authDomain;
-var databaseURL = config.databaseURL;
-var projectId = config.projectId;
-var storageBucket = config.storageBucket;
-var messagingSenderId = config.messagingSenderId;
+// var apiKey = config.apiKey;
+// var authDomain = config.authDomain;
+// var databaseURL = config.databaseURL;
+// var projectId = config.projectId;
+// var storageBucket = config.storageBucket;
+// var messagingSenderId = config.messagingSenderId;
 
-// var config = {
-//     apiKey: "AIzaSyA2_tnNsCgwOh6gNQIhuBPu5dzrtdctTEU",
-//     authDomain: "in-a-pinch-project-2.firebaseapp.com",
-//     databaseURL: "https://in-a-pinch-project-2.firebaseio.com",
-//     projectId: "in-a-pinch-project-2",
-//     storageBucket: "in-a-pinch-project-2.appspot.com",
-//     messagingSenderId: "674290992138"
-// };
+var config = {
+    apiKey: "AIzaSyA2_tnNsCgwOh6gNQIhuBPu5dzrtdctTEU",
+    authDomain: "in-a-pinch-project-2.firebaseapp.com",
+    databaseURL: "https://in-a-pinch-project-2.firebaseio.com",
+    projectId: "in-a-pinch-project-2",
+    storageBucket: "in-a-pinch-project-2.appspot.com",
+    messagingSenderId: "674290992138"
+};
 firebase.initializeApp(config);
 
 // Get elements
