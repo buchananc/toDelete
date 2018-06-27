@@ -27,13 +27,13 @@ const btnSignUp = document.getElementById('btnSignUp');
 const btnLogout = document.getElementById('btnLogout');
 
 //added section Get elements
-const preObject = document.getElementById('object');
+// const preObject = document.getElementById('object');
 
 //added section Create references
-const dbRefObject = firebase.database().ref().child('object');
+// const dbRefObject = firebase.database().ref().child('object');
 
 //added section sync object changes
-dbRefObject.on('value', snap => console.log(snap.val()));
+// dbRefObject.on('value', snap => console.log(snap.val()));
 
 /////////////////////////////////////////////////////// 
 //Add login event
@@ -52,7 +52,7 @@ btnLogin.addEventListener('click', e => {
         var errorCode = error.code;
         var errorMessage = error.message;
 
-        $("#exampleModal").modal();
+        // $("#exampleModal").modal();
         // alert("You look a little flushed! The email you entered is not correct. Try again!");
         console.log(errorMessage);
     });
