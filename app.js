@@ -15,6 +15,8 @@ var config = {
     messagingSenderId: "674290992138"
 };
 firebase.initializeApp(config);
+// Get a reference to the database service
+var database = firebase.database(); //added
 
 // Get elements
 const userEmail = document.getElementById('userEmail');
@@ -26,14 +28,6 @@ const btnLogin = document.getElementById('btnLogin');
 const btnRegister = document.getElementById('btnRegister');
 const btnLogout = document.getElementById('btnLogout');
 
-//added section Get elements
-// const preObject = document.getElementById('object');
-
-//added section Create references
-// const dbRefObject = firebase.database().ref().child('object');
-
-//added section sync object changes
-// dbRefObject.on('value', snap => console.log(snap.val()));
 
 /////////////////////////////////////////////////////// 
 //Add login event
@@ -59,6 +53,62 @@ btnLogin.addEventListener('click', e => {
     // alert(errorMessage);
     console.log(errorMessage);
 });
+
+///////////////////////////////////////////////////////
+// Facebook SignIn
+// https://developers.facebook.com/docs/facebook-login/permissions
+// User Attributes that can be used: (email, user_age_range, user_birthday, user_friends, user_gender, user_hometown, user_link, user_location)
+// Fields that are properties on the User object: (id, first_name, last_name, middle_name, name, name_format, picture, short_name)
+// The id field is an app-scoped ID.
+///////////////////////////////////////////////////////
+// Initialize Facebook
+var provider = new firebase.auth.FacebookAuthProvider();
+
+// Gives the basic version of the Facebook SDK
+window.fbAsyncInit = function () {
+    FB.init({
+        appId: '416268245554196',
+        cookie: true,
+        xfbml: true,
+        version: 'v3.0'
+    });
+
+    // FB.AppEvents.logPageView();
+
+    // FB login status
+    FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+    });
+
+};
+
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+function statusChangeCallback(response) {
+    if(response.status === 'connected'){
+        console.log('Logged into FB and authenticated');
+    } else {
+        console.log('FB Not Authenticated');
+    }
+}
+
+// Callback to FB login btn
+function checkLoginState() {
+    FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+    });
+}
+
+
 
 ///////////////////////////////////////////////////////
 // Add signup event
